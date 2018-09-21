@@ -56,8 +56,11 @@ The connection between these two paradigms becomes more tenuous  when  we  consi
 7. **Principal Components Analysis** : PCA  learns  a  linear  transformation <a href="https://www.codecogs.com/eqnedit.php?latex=h=f\left&space;(&space;x&space;\right&space;)&space;=W^{T}x&plus;b" target="_blank"><img src="https://latex.codecogs.com/gif.latex?h=f\left&space;(&space;x&space;\right&space;)&space;=W^{T}x&plus;b" title="h=f\left ( x \right ) =W^{T}x+b" /></a> of  input <a href="https://www.codecogs.com/eqnedit.php?latex=x\in&space;R^{d_{x}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x\in&space;R^{d_{x}}" title="x\in R^{d_{x}}" /></a>,  where  the  columns  of <a href="https://www.codecogs.com/eqnedit.php?latex={d_{x}}\times&space;{d_{h}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{d_{x}}\times&space;{d_{h}}" title="{d_{x}}\times {d_{h}}" /></a> matrix *W* form  an  orthogonal  basis  for  the <a href="https://www.codecogs.com/eqnedit.php?latex={d_{h}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{d_{h}}" title="{d_{h}}" /></a> orthogonal directions of greatest variance in the training data.
 
 The result is <a href="https://www.codecogs.com/eqnedit.php?latex={d_{h}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{d_{h}}" title="{d_{h}}" /></a> features   (the components of representation *h* )   that are  decorrelated. The three  interpretations  of  PCA  are  the following:  
+
 a)  it  is  related  to probabilistic  models such  as  probabilistic  PCA,  factor  analysis  and  the  traditional multivariate Gaussian distribution (the leading eigenvectors of the  covariance  matrix  are  the  principal  components);  
-b)  the representation it learns is essentially the same as that learned by a basic linear auto-encoder; 
+
+b)  the representation it learns is essentially the same as that learned by a basic linear auto-encoder;
+
 c) it can be viewed  as  a  simple  linear  form  of  linear manifold  learning,  i.e.,  characterizing  a  lower-dimensional  region in  input  space  near  which  the  data  density  is  peaked. 
 
 ## What are possible future research directions suggested in the paper? 
