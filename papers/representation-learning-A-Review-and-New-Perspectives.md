@@ -49,7 +49,16 @@ An example of non-distributed representation is the  one  learned  by most clust
 3. **Sparse representations**: distributed representations where only a few of the elements can be varied at a time, i.e.,k < N.
 4. **Non-parametric algorithms**: We understand non-parametric as including all learning  algorithms whose capacity can be increased appropriately as the amount of data and its complexity  demands  it,  e.g.  including  mixture  models  and  neural  networks where the number of parameters is a data-selected hyper-parameter.
 5. **Advantages of deep architecture**: (1) deep architectures promote the re-use of features, and (2)  deep  architectures  can  potentially  lead  to  progressively more abstract features  at  higher  layers  of  representations (more removed from the data) because more abstract concepts can often  be  constructed  in  terms  of  less  abstract  ones.
+6. **Probabilistic Graphic Models vs. Neural Networks**: Within the community of researchers interested in representa-tion learning, there has developed two broad parallel lines of inquiry: one rooted in probabilistic graphical models and one rooted  in  neural  networks.  Fundamentally,  the  difference  between these two paradigms is whether the layered architecture of a deep learning model is to be interpreted as describing a probabilistic  graphical  model  or  as  describing  a  computation graph.  In  short,  are  hidden  units  considered  latent  random variables or as computational nodes? 
 
+The connection between these two paradigms becomes more tenuous  when  we  consider  deeper  models  where,  in  the  case of  a  probabilistic  model,  exact  inference  typically  becomes intractable.  In  the  case  of  deep  models,  the  computational graph diverges from the structure of the model.
+
+7. **Principal Components Analysis** : PCA  learns  a  linear  transformation <a href="https://www.codecogs.com/eqnedit.php?latex=h=f\left&space;(&space;x&space;\right&space;)&space;=W^{T}x&plus;b" target="_blank"><img src="https://latex.codecogs.com/gif.latex?h=f\left&space;(&space;x&space;\right&space;)&space;=W^{T}x&plus;b" title="h=f\left ( x \right ) =W^{T}x+b" /></a> of  input <a href="https://www.codecogs.com/eqnedit.php?latex=x\in&space;R^{d_{x}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x\in&space;R^{d_{x}}" title="x\in R^{d_{x}}" /></a>,  where  the  columns  of <a href="https://www.codecogs.com/eqnedit.php?latex={d_{x}}\times&space;{d_{h}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{d_{x}}\times&space;{d_{h}}" title="{d_{x}}\times {d_{h}}" /></a> matrix *W* form  an  orthogonal  basis  for  the <a href="https://www.codecogs.com/eqnedit.php?latex={d_{h}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{d_{h}}" title="{d_{h}}" /></a> orthogonal directions of greatest variance in the training data.
+
+The result is <a href="https://www.codecogs.com/eqnedit.php?latex={d_{h}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{d_{h}}" title="{d_{h}}" /></a> features   (the components of representation *h* )   that are  decorrelated. The three  interpretations  of  PCA  are  the following:  
+a)  it  is  related  to probabilistic  models such  as  probabilistic  PCA,  factor  analysis  and  the  traditional multivariate Gaussian distribution (the leading eigenvectors of the  covariance  matrix  are  the  principal  components);  
+b)  the representation it learns is essentially the same as that learned by a basic linear auto-encoder; 
+c) it can be viewed  as  a  simple  linear  form  of  linear manifold  learning,  i.e.,  characterizing  a  lower-dimensional  region in  input  space  near  which  the  data  density  is  peaked. 
 
 ## What are possible future research directions suggested in the paper? 
 1. Research new priors and incorporate more priors into one algorithm. 
@@ -59,4 +68,5 @@ An example of non-distributed representation is the  one  learned  by most clust
 
 ## What are the concepts that I need to look further into? 
 1. Inference procedures of probabilistic latent-variable models
-2. 
+2. Restricted  Boltzmann  machine  (RBM)
+3. 
