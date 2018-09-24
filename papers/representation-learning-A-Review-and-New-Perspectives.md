@@ -63,6 +63,25 @@ b)  the representation it learns is essentially the same as that learned by a ba
 
 c) it can be viewed  as  a  simple  linear  form  of  linear manifold  learning,  i.e.,  characterizing  a  lower-dimensional  region in  input  space  near  which  the  data  density  is  peaked. 
 
+PGA can be given a natural interpretation in factor analysis. 
+
+8. **Probablistic Graphic Model**: We  can  express  as *p(x|h)* a probabilistic model over the joint space of the latent variables,*h*, and observed data or visible variables *x*. Feature values  are  conceived  as  the  result  of  an  inference  process  to determine  the  probability  distribution  of  the  latent  variables given the data, i.e. *p(h|x)*, often referred to as the posterior probability. Learning is conceived in term of estimating a set of model parameters that (locally) maximizes the regularized likelihood  of  the  training  data. 
+
+**Directed latent factor models** separately parametrize the con-ditional  likelihood *p(x|h)* and  the prior *p(h)* to  construct the  joint  distribution, *p(x|h) = p(x|h)p(h)*
+
+9.  **Explaining Away**, i.e., a priori independent causes of an event can become  non-independent  given  the  observation  of  the  event.
+Latent  factor  models  can  generally  be  interpreted  as  latent cause models,  where  the *h* activations  cause  the  observed *x*. This renders the a priori independent *h* to be non-independent.
+
+As  a  consequence,  recovering  the  posterior  distribution  of *h* , *p(h|x)* (which we use as a basis for feature representation), is   often   computationally   challenging   and   can   be   entirely intractable, especially whenh is discrete.
+
+Example of **Explaining Away**: A  classic  example  that  illustrates  the  phenomenon  is  to imagine you are on vacation away from home and you receivea phone call from the security system company, telling you that the alarm has been activated. You begin worrying your home has  been  burglarized,  but  then  you  hear  on  the  radio  that  a minor earthquake has been reported in the area of your home. If you happen to know from prior experience that earthquakes sometimes  cause  your  home  alarm  system  to  activate,  then suddenly you relax, confident that your home has very likely not been burglarized.
+
+The example illustrates how the *alarm activation* rendered two  otherwise  entirely  independent  causes, *burglarized* and *earthquake*,  to  become  dependent  –  in  this  case,  the  depen-dency  is  one  of  mutual  exclusivity.  Since  both burglarized andearthquake are  very  rare  events  and  both  can  cause alarm  activation,  the  observation  of  oneexplains  away the other.
+
+
+
+
+
 ## What are possible future research directions suggested in the paper? 
 1. Research new priors and incorporate more priors into one algorithm. 
 2. How to disentangle underlying explanatory factors
