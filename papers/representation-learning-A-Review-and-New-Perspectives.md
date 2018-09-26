@@ -80,8 +80,6 @@ The example illustrates how the *alarm activation* rendered two  otherwise  enti
 
 
 
-
-
 ## What are possible future research directions suggested in the paper? 
 1. Research new priors and incorporate more priors into one algorithm. 
 2. How to disentangle underlying explanatory factors
@@ -91,4 +89,5 @@ The example illustrates how the *alarm activation* rendered two  otherwise  enti
 ## What are the concepts that I need to look further into? 
 1. Inference procedures of probabilistic latent-variable models
 2. Restricted  Boltzmann  machine  (RBM)
-3. 
+3. Spike-and-Slab RMB
+4. Manifold Learning
